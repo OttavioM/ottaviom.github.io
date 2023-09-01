@@ -58,6 +58,18 @@
 								};
 							</script>
 							<script>
+								function loadJSONAndStore(filePath) {
+								return loadJSONFile(filePath)
+									.then(data => {
+										graphs1 = data; // Assign the JSON data to the global variable
+										return data; // Return the JSON data
+									})
+									.catch(error => {
+										console.error('Error:', error);
+									});
+								}
+							</script>
+							<script>
 								let activeButton = null;
 								function myFunction(jsonFilePath, buttonElement) {
 									// Remove the active class from the previously active button
@@ -78,8 +90,7 @@
 												dataj = data;
 												console.log('JSON data loaded:', dataj);
 											}
-											Plotly.purge(chart1);
-											graphs1 = loadJSONFile('./jsons_plotly_rivedere/scatter.json');	
+											Plotly.purge(chart1);	
 											Plotly.newPlot("chart1", graphs1, {});
 											Plotly.plot("chart1", dataj, {});
 										})
@@ -105,6 +116,16 @@
 								};
 							</script>
 							<script>
+							let graphs1;
+								loadJSONAndStore('your_file_path.json')
+									.then(data => {
+										console.log('JSON data loaded:', data);
+										// Now you can access the JSON data from the global variable jsonData
+										// jsonData contains the loaded JSON data
+									})
+									.catch(error => {
+										console.error('Error:', error);
+									});
 								myFunction_reset_view('./jsons_plotly_rivedere/scatter.json',{});
 							</script> 
                             <button onclick="myFunction('./jsons_plotly_rivedere/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
