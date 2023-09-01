@@ -18,56 +18,6 @@
 
 </head>
 <body>
-	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-	<script type="text/javascript">
-		let activeButton = null;
-		function myFunction(jsonFilePath, buttonElement) {
-			// Remove the active class from the previously active button
-			if (activeButton) {
-				activeButton.classList.remove('active');
-			}
-			
-			// Add the active class to the current button
-			buttonElement.classList.add('active');
-			activeButton = buttonElement;
-
-			// Rest of your myFunction code...
-			let dataj;
-
-			loadJSONFile(jsonFilePath)
-				.then(data => {
-					if (data) {
-						dataj = data;
-						console.log('JSON data loaded:', dataj);
-					}
-					Plotly.purge(chart1);
-					var graphs1 = {{ graph1JSON | safe }};
-					Plotly.newPlot("chart1", graphs1, {});
-					Plotly.plot("chart1", dataj, {});
-				})
-				.catch(error => {
-					console.error('Error:', error);
-				});
-		}
-		var graphs1 = myFunction('./jsons_plotly_rivedere/scatter.json', {});
-		Plotly.plot("chart1", graphs1,{});
-
-
-		// Asynchronous function to load JSON file
-		function loadJSONFile(filePath) {
-			return fetch(filePath)
-				.then(response => {
-					if (!response.ok) {
-						throw new Error(`Failed to load JSON file: ${response.status} ${response.statusText}`);
-					}
-					return response.json();
-				})
-				.catch(error => {
-					console.error('Error loading JSON file:', error);
-				});
-		}
-
-	</script>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
           <a href="https://ihcantabria.com/">
@@ -91,6 +41,57 @@
                     <div class="card m-auto" style="width: 100%;">
                         <div class="card-body">
                             <div id="chart1"></div>	
+							<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+							<script type="text/javascript">
+								let activeButton = null;
+								let graphs1; // Define a global variable to store the graphs data
+								function myFunction(jsonFilePath, buttonElement) {
+									// Remove the active class from the previously active button
+									if (activeButton) {
+										activeButton.classList.remove('active');
+									}
+									
+									// If a buttonElement is provided, add the active class to it
+									if (buttonElement) {
+										buttonElement.classList.add('active');
+										activeButton = buttonElement;
+									}
+									let dataj;
+
+									loadJSONFile(jsonFilePath)
+										.then(data => {
+											if (data) {
+												dataj = data;
+												console.log('JSON data loaded:', dataj);
+											}
+											Plotly.purge(chart1);
+											var graphs1 = myFunction('./jsons_plotly_rivedere/scatter.json');
+											Plotly.newPlot("chart1", graphs1, {});
+											Plotly.plot("chart1", dataj, {});
+										})
+										.catch(error => {
+											console.error('Error:', error);
+										});
+								}
+								var graphs1 = myFunction('./jsons_plotly_rivedere/scatter.json');
+								Plotly.plot("chart1", graphs1,{});
+
+
+								// Asynchronous function to load JSON file
+								function loadJSONFile(filePath) {
+									return fetch(filePath)
+										.then(response => {
+											if (!response.ok) {
+												throw new Error(`Failed to load JSON file: ${response.status} ${response.statusText}`);
+											}
+											return response.json();
+										})
+										.catch(error => {
+											console.error('Error loading JSON file:', error);
+										});
+								}
+
+							</script>
                             <button onclick="myFunction('./jsons_plotly_rivedere/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
                             <button onclick="myFunction('./jsons_plotly_rivedere/Eurpe.json',this)" type="button" class="btn btn-outline-primary" id="btnEUr">Europe</button>
                             <button onclick="myFunction('./jsons_plotly_rivedere/AmericaN.json',this)" type="button" class="btn btn-outline-primary" id="btnAmN">North America</button>
