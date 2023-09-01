@@ -91,7 +91,17 @@
 												console.log('JSON data loaded:', dataj);
 											}
 											Plotly.purge(chart1);	
-											myFunction_reset_view('./jsons_plotly_rivedere/scatter.json',{});
+											loadJSONFile(jsonFilePath)
+												.then(data => {
+													if (data) {
+														dataj = data;
+														console.log('JSON data loaded:', dataj);
+													}
+													Plotly.newPlot("chart1", dataj, {});
+												})
+												.catch(error => {
+													console.error('Error:', error);
+												});
 											Plotly.plot("chart1", dataj, {});
 										})
 										.catch(error => {
