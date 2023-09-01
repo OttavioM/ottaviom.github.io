@@ -90,7 +90,7 @@
 												dataj = data;
 												console.log('JSON data loaded:', dataj);
 											}
-											Plotly.purge(chart1);
+											// Plotly.purge(chart1);
 											// Plotly.newPlot("chart1", graphs1.data, graphs1.layout);
 											Plotly.plot("chart1", dataj.data, dataj.layout);
 										})
