@@ -58,6 +58,7 @@
 								};
 							</script>
 							<script>
+								let graphs1;
 								function loadJSONAndStore(filePath) {
 								return loadJSONFile(filePath)
 									.then(data => {
@@ -83,13 +84,14 @@
 										activeButton = buttonElement;
 									}
 									let dataj;
-									myFunction_reset_view('./jsons_plotly_rivedere/scatter.json',{});
 									loadJSONFile(jsonFilePath)
 										.then(data => {
 											if (data) {
 												dataj = data;
 												console.log('JSON data loaded:', dataj);
 											}
+											Plotly.purge(chart1);
+											Plotly.newPlot("chart1", graphs1, {});
 											Plotly.plot("chart1", dataj, {});
 										})
 										.catch(error => {
@@ -114,6 +116,7 @@
 								};
 							</script>
 							<script>
+								loadJSONAndStore('./jsons_plotly_rivedere/scatter.json')
 								myFunction_reset_view('./jsons_plotly_rivedere/scatter.json',{});
 							</script> 
                             <button onclick="myFunction('./jsons_plotly_rivedere/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
