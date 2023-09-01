@@ -15,6 +15,9 @@
     {% else %}
         <title>CodeWithPrince</title>
     {% endif %} -->
+
+</head>
+<body>
 	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 	<script type="text/javascript">
 		let activeButton = null;
@@ -46,63 +49,9 @@
 					console.error('Error:', error);
 				});
 		}
-
-
-		function myFunction_old(jsonFilePath) {
-				// var graphs2 = {{ graph2JSON | safe}};
-				// Plotly.plot("chart1", graphs2,{});
-				// const jsonFilePath = 'static/jsons_plotly_rivedere/Africa.json';
-				let dataj;
-				loadJSONFile(jsonFilePath)
-					.then(data => {
-						if (data) {
-							dataj = data;
-							console.log('JSON data loaded:', dataj);
-							}
-						Plotly.purge(chart1);
-						var graphs1 = {{ graph1JSON | safe}};
-						Plotly.newPlot("chart1", graphs1,{});
-						Plotly.plot("chart1", dataj,{});});
-				// var graphs1 = {{ graph1JSON | safe}};
-				// Plotly.plot("chart1", graphs1,{});
-				// Plotly.plot("chart1", dataj,{});
-						};
-		
-		function myFunction2() {
-				// var graphs2 = {{ graph2JSON | safe}};
-				// Plotly.plot("chart1", graphs2,{});
-				const jsonFilePath = 'static/jsons_plotly_rivedere/AmericaN.json';
-				let dataj;
-				loadJSONFile(jsonFilePath)
-					.then(data => {
-						if (data) {
-							dataj = data;
-							console.log('JSON data loaded:', dataj);
-							}
-						Plotly.purge(chart1);
-						var graphs1 = {{ graph1JSON | safe}};
-						Plotly.newPlot("chart1", graphs1,{});
-						Plotly.plot("chart1", dataj,{});});
-				// var graphs1 = {{ graph1JSON | safe}};
-				// Plotly.plot("chart1", graphs1,{});
-				// Plotly.plot("chart1", dataj,{});
-						};
-
-		// function myFunction2() {
-		//     var graphs3 = {{ graph3JSON | safe}};
-		//     var graphs1 = {{ graph1JSON | safe}};
-		//     Plotly.newPlot("chart1", graphs1,{});
-		//     Plotly.plot("chart1", graphs3,{});
-		//         };
-
-		var graphs1 = {{ graph1JSON | safe}};
+		var graphs1 = myFunction('./jsons_plotly_rivedere/scatter.json', {});
 		Plotly.plot("chart1", graphs1,{});
 
-		// var graphs2 = {{ graph2JSON | safe}};
-		// Plotly.plot("chart2", graphs2,{});
-
-		// var graphs3 = {{ graph3JSON | safe}};
-		// Plotly.plot("chart3", graphs3,{});
 
 		// Asynchronous function to load JSON file
 		function loadJSONFile(filePath) {
@@ -119,9 +68,6 @@
 		}
 
 	</script>
-
-</head>
-<body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
           <a href="https://ihcantabria.com/">
@@ -144,13 +90,7 @@
                 <div class="row p-4">
                     <div class="card m-auto" style="width: 100%;">
                         <div class="card-body">
-                            <div id="chart1"></div>
-							<script>
-								function myFunction(jsonFilePath, buttonElement) {
-									alert(1)
-								}
-							</script>
-	
+                            <div id="chart1"></div>	
                             <button onclick="myFunction('./jsons_plotly_rivedere/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
                             <button onclick="myFunction('./jsons_plotly_rivedere/Eurpe.json',this)" type="button" class="btn btn-outline-primary" id="btnEUr">Europe</button>
                             <button onclick="myFunction('./jsons_plotly_rivedere/AmericaN.json',this)" type="button" class="btn btn-outline-primary" id="btnAmN">North America</button>
