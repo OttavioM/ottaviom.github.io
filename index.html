@@ -72,7 +72,7 @@
 										.catch(error => {
 											console.error('Error:', error);
 										});
-								}
+								};
 								var graphs1 = loadJSONFile('./jsons_plotly_rivedere/scatter.json');
 								Plotly.plot("chart1", graphs1,{});
 
@@ -89,7 +89,7 @@
 										.catch(error => {
 											console.error('Error loading JSON file:', error);
 										});
-								}
+								};
 
 							</script>
 							<script>
@@ -120,7 +120,7 @@
 										.catch(error => {
 											console.error('Error:', error);
 										});
-							}
+							};
 							</script>
                             <button onclick="myFunction('./jsons_plotly_rivedere/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
                             <button onclick="myFunction('./jsons_plotly_rivedere/Eurpe.json',this)" type="button" class="btn btn-outline-primary" id="btnEUr">Europe</button>
