@@ -45,27 +45,6 @@
 							<script>
 								let activeButton = null;
 								let graphs1; // Define a global variable to store the graphs data
-							
-								var graphs1 = loadJSONFile('./jsons_plotly_rivedere/scatter.json');
-								Plotly.plot("chart1", graphs1,{});
-							</script>
-							<script>
-								// Asynchronous function to load JSON file
-								function loadJSONFile(filePath) {
-									return fetch(filePath)
-										.then(response => {
-											if (!response.ok) {
-												throw new Error(`Failed to load JSON file: ${response.status} ${response.statusText}`);
-											}
-											return response.json();
-										})
-										.catch(error => {
-											console.error('Error loading JSON file:', error);
-										});
-								}
-
-							</script>
-							<script>
 								function myFunction(jsonFilePath, buttonElement) {
 									// Remove the active class from the previously active button
 									if (activeButton) {
@@ -94,6 +73,28 @@
 											console.error('Error:', error);
 										});
 								}
+								var graphs1 = loadJSONFile('./jsons_plotly_rivedere/scatter.json');
+								Plotly.plot("chart1", graphs1,{});
+
+
+								// Asynchronous function to load JSON file
+								function loadJSONFile(filePath) {
+									return fetch(filePath)
+										.then(response => {
+											if (!response.ok) {
+												throw new Error(`Failed to load JSON file: ${response.status} ${response.statusText}`);
+											}
+											return response.json();
+										})
+										.catch(error => {
+											console.error('Error loading JSON file:', error);
+										});
+								}
+
+							</script>
+							<script>
+							function myFunction(jsonFilePath, buttonElement) {
+							alert(1)
 							}
 							</script>
                             <button onclick="myFunction('./jsons_plotly_rivedere/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
