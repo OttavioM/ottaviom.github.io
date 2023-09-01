@@ -89,6 +89,22 @@
 								};
 							</script>
 							<script>
+								function myFunction_reset_view(jsonFilePath,buttonElement) {
+									loadJSONFile(jsonFilePath)
+										.then(data => {
+											if (data) {
+												dataj = data;
+												console.log('JSON data loaded:', dataj);
+											}
+											Plotly.purge(chart1);
+											Plotly.newPlot("chart1", dataj, {});
+										})
+										.catch(error => {
+											console.error('Error:', error);
+										});
+								};
+							</script>
+							<script>
 								var graphs1 = loadJSONFile('./jsons_plotly_rivedere/scatter.json');
 								Plotly.plot("chart1", graphs1,{});
 							</script> 
@@ -101,6 +117,7 @@
                             <button onclick="myFunction('./jsons_plotly_rivedere/Asia3.json',this)" type="button" class="btn btn-outline-primary" id="btnAs3">Asia 3</button>
                             <button onclick="myFunction('./jsons_plotly_rivedere/Oceania1.json',this)" type="button" class="btn btn-outline-primary" id="btnOc1">Oceania 1</button>
                             <button onclick="myFunction('./jsons_plotly_rivedere/Oceania2.json',this)" type="button" class="btn btn-outline-primary" id="btnOc2">Oceania 2</button>
+							<button onclick="myFunction_reset_view('./jsons_plotly_rivedere/scatter.json',this)" type="button" class="btn btn-outline-primary" id="btnRset">Reset View</button>
                             <p class="card-text" style="padding-top: 3rem;">
                                 The color identifies the relative energy of each family, it is expressed in percentage, 
                                 \(m_{0_{WSys_i}} \over m_{0_{WSys_{tot}}}\). The size of the arrow represents the time averaged \(T_p\), 
