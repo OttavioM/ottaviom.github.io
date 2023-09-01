@@ -63,8 +63,7 @@
 												dataj = data;
 												console.log('JSON data loaded:', dataj);
 											}
-											Plotly.purge(chart1);
-											Plotly.newPlot("chart1", graphs1, {});
+											myFunction_reset_view('./jsons_plotly_rivedere/scatter.json',{});
 											Plotly.plot("chart1", dataj, {});
 										})
 										.catch(error => {
