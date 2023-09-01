@@ -15,6 +15,110 @@
     {% else %}
         <title>CodeWithPrince</title>
     {% endif %} -->
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script type="text/javascript">
+		let activeButton = null;
+		function myFunction(jsonFilePath, buttonElement) {
+			// Remove the active class from the previously active button
+			if (activeButton) {
+				activeButton.classList.remove('active');
+			}
+			
+			// Add the active class to the current button
+			buttonElement.classList.add('active');
+			activeButton = buttonElement;
+
+			// Rest of your myFunction code...
+			let dataj;
+
+			loadJSONFile(jsonFilePath)
+				.then(data => {
+					if (data) {
+						dataj = data;
+						console.log('JSON data loaded:', dataj);
+					}
+					Plotly.purge(chart1);
+					var graphs1 = {{ graph1JSON | safe }};
+					Plotly.newPlot("chart1", graphs1, {});
+					Plotly.plot("chart1", dataj, {});
+				})
+				.catch(error => {
+					console.error('Error:', error);
+				});
+		}
+
+
+		function myFunction_old(jsonFilePath) {
+				// var graphs2 = {{ graph2JSON | safe}};
+				// Plotly.plot("chart1", graphs2,{});
+				// const jsonFilePath = 'static/jsons_plotly_rivedere/Africa.json';
+				let dataj;
+				loadJSONFile(jsonFilePath)
+					.then(data => {
+						if (data) {
+							dataj = data;
+							console.log('JSON data loaded:', dataj);
+							}
+						Plotly.purge(chart1);
+						var graphs1 = {{ graph1JSON | safe}};
+						Plotly.newPlot("chart1", graphs1,{});
+						Plotly.plot("chart1", dataj,{});});
+				// var graphs1 = {{ graph1JSON | safe}};
+				// Plotly.plot("chart1", graphs1,{});
+				// Plotly.plot("chart1", dataj,{});
+						};
+		
+		function myFunction2() {
+				// var graphs2 = {{ graph2JSON | safe}};
+				// Plotly.plot("chart1", graphs2,{});
+				const jsonFilePath = 'static/jsons_plotly_rivedere/AmericaN.json';
+				let dataj;
+				loadJSONFile(jsonFilePath)
+					.then(data => {
+						if (data) {
+							dataj = data;
+							console.log('JSON data loaded:', dataj);
+							}
+						Plotly.purge(chart1);
+						var graphs1 = {{ graph1JSON | safe}};
+						Plotly.newPlot("chart1", graphs1,{});
+						Plotly.plot("chart1", dataj,{});});
+				// var graphs1 = {{ graph1JSON | safe}};
+				// Plotly.plot("chart1", graphs1,{});
+				// Plotly.plot("chart1", dataj,{});
+						};
+
+		// function myFunction2() {
+		//     var graphs3 = {{ graph3JSON | safe}};
+		//     var graphs1 = {{ graph1JSON | safe}};
+		//     Plotly.newPlot("chart1", graphs1,{});
+		//     Plotly.plot("chart1", graphs3,{});
+		//         };
+
+		var graphs1 = {{ graph1JSON | safe}};
+		Plotly.plot("chart1", graphs1,{});
+
+		// var graphs2 = {{ graph2JSON | safe}};
+		// Plotly.plot("chart2", graphs2,{});
+
+		// var graphs3 = {{ graph3JSON | safe}};
+		// Plotly.plot("chart3", graphs3,{});
+
+		// Asynchronous function to load JSON file
+		function loadJSONFile(filePath) {
+			return fetch(filePath)
+				.then(response => {
+					if (!response.ok) {
+						throw new Error(`Failed to load JSON file: ${response.status} ${response.statusText}`);
+					}
+					return response.json();
+				})
+				.catch(error => {
+					console.error('Error loading JSON file:', error);
+				});
+		}
+
+	</script>
 
 </head>
 <body>
@@ -117,112 +221,7 @@
         duration: 1000
       });
      
-    </script>
-	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-                <script type="text/javascript">
-                    let activeButton = null;
-                    function myFunction(jsonFilePath, buttonElement) {
-                        // Remove the active class from the previously active button
-                        if (activeButton) {
-                            activeButton.classList.remove('active');
-                        }
-                        
-                        // Add the active class to the current button
-                        buttonElement.classList.add('active');
-                        activeButton = buttonElement;
-            
-                        // Rest of your myFunction code...
-                        let dataj;
-            
-                        loadJSONFile(jsonFilePath)
-                            .then(data => {
-                                if (data) {
-                                    dataj = data;
-                                    console.log('JSON data loaded:', dataj);
-                                }
-                                Plotly.purge(chart1);
-                                var graphs1 = {{ graph1JSON | safe }};
-                                Plotly.newPlot("chart1", graphs1, {});
-                                Plotly.plot("chart1", dataj, {});
-                            })
-                            .catch(error => {
-                                console.error('Error:', error);
-                            });
-                    }
-            
-            
-                    function myFunction_old(jsonFilePath) {
-                            // var graphs2 = {{ graph2JSON | safe}};
-                            // Plotly.plot("chart1", graphs2,{});
-                            // const jsonFilePath = 'static/jsons_plotly_rivedere/Africa.json';
-                            let dataj;
-                            loadJSONFile(jsonFilePath)
-                                .then(data => {
-                                    if (data) {
-                                        dataj = data;
-                                        console.log('JSON data loaded:', dataj);
-                                        }
-                                    Plotly.purge(chart1);
-                                    var graphs1 = {{ graph1JSON | safe}};
-                                    Plotly.newPlot("chart1", graphs1,{});
-                                    Plotly.plot("chart1", dataj,{});});
-                            // var graphs1 = {{ graph1JSON | safe}};
-                            // Plotly.plot("chart1", graphs1,{});
-                            // Plotly.plot("chart1", dataj,{});
-                                    };
-                    
-                    function myFunction2() {
-                            // var graphs2 = {{ graph2JSON | safe}};
-                            // Plotly.plot("chart1", graphs2,{});
-                            const jsonFilePath = 'static/jsons_plotly_rivedere/AmericaN.json';
-                            let dataj;
-                            loadJSONFile(jsonFilePath)
-                                .then(data => {
-                                    if (data) {
-                                        dataj = data;
-                                        console.log('JSON data loaded:', dataj);
-                                        }
-                                    Plotly.purge(chart1);
-                                    var graphs1 = {{ graph1JSON | safe}};
-                                    Plotly.newPlot("chart1", graphs1,{});
-                                    Plotly.plot("chart1", dataj,{});});
-                            // var graphs1 = {{ graph1JSON | safe}};
-                            // Plotly.plot("chart1", graphs1,{});
-                            // Plotly.plot("chart1", dataj,{});
-                                    };
-            
-                    // function myFunction2() {
-                    //     var graphs3 = {{ graph3JSON | safe}};
-                    //     var graphs1 = {{ graph1JSON | safe}};
-                    //     Plotly.newPlot("chart1", graphs1,{});
-                    //     Plotly.plot("chart1", graphs3,{});
-                    //         };
-            
-                    var graphs1 = {{ graph1JSON | safe}};
-                    Plotly.plot("chart1", graphs1,{});
-            
-                    // var graphs2 = {{ graph2JSON | safe}};
-                    // Plotly.plot("chart2", graphs2,{});
-            
-                    // var graphs3 = {{ graph3JSON | safe}};
-                    // Plotly.plot("chart3", graphs3,{});
-            
-                    // Asynchronous function to load JSON file
-                    function loadJSONFile(filePath) {
-                        return fetch(filePath)
-                            .then(response => {
-                                if (!response.ok) {
-                                    throw new Error(`Failed to load JSON file: ${response.status} ${response.statusText}`);
-                                }
-                                return response.json();
-                            })
-                            .catch(error => {
-                                console.error('Error loading JSON file:', error);
-                            });
-                    }
-            
-                </script>
-   
+    </script>   
   
 </body>
 </html>
