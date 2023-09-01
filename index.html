@@ -42,7 +42,7 @@
                         <div class="card-body">
                             <div id="chart1"></div>	
 							<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-							<script type="text/javascript">
+							<script>
 								let activeButton = null;
 								let graphs1; // Define a global variable to store the graphs data
 								function myFunction(jsonFilePath, buttonElement) {
@@ -65,7 +65,7 @@
 												console.log('JSON data loaded:', dataj);
 											}
 											Plotly.purge(chart1);
-											var graphs1 = myFunction('./jsons_plotly_rivedere/scatter.json');
+											var graphs1 = loadJSONFile('./jsons_plotly_rivedere/scatter.json');
 											Plotly.newPlot("chart1", graphs1, {});
 											Plotly.plot("chart1", dataj, {});
 										})
@@ -73,7 +73,7 @@
 											console.error('Error:', error);
 										});
 								}
-								var graphs1 = myFunction('./jsons_plotly_rivedere/scatter.json');
+								var graphs1 = loadJSONFile('./jsons_plotly_rivedere/scatter.json');
 								Plotly.plot("chart1", graphs1,{});
 
 
