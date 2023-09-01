@@ -145,6 +145,12 @@
                     <div class="card m-auto" style="width: 100%;">
                         <div class="card-body">
                             <div id="chart1"></div>
+							<script>
+								function myFunction(jsonFilePath, buttonElement) {
+									alert(1)
+								}
+							</script>
+	
                             <button onclick="myFunction('./jsons_plotly_rivedere/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
                             <button onclick="myFunction('./jsons_plotly_rivedere/Eurpe.json',this)" type="button" class="btn btn-outline-primary" id="btnEUr">Europe</button>
                             <button onclick="myFunction('./jsons_plotly_rivedere/AmericaN.json',this)" type="button" class="btn btn-outline-primary" id="btnAmN">North America</button>
