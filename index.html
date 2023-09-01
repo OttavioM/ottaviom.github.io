@@ -94,7 +94,32 @@
 							</script>
 							<script>
 							function myFunction(jsonFilePath, buttonElement) {
-							alert(1)
+							// Remove the active class from the previously active button
+									if (activeButton) {
+										activeButton.classList.remove('active');
+									}
+									
+									// If a buttonElement is provided, add the active class to it
+									if (buttonElement) {
+										buttonElement.classList.add('active');
+										activeButton = buttonElement;
+									}
+									let dataj;
+
+									loadJSONFile(jsonFilePath)
+										.then(data => {
+											if (data) {
+												dataj = data;
+												console.log('JSON data loaded:', dataj);
+											}
+											Plotly.purge(chart1);
+											var graphs1 = loadJSONFile('./jsons_plotly_rivedere/scatter.json');
+											Plotly.newPlot("chart1", graphs1, {});
+											Plotly.plot("chart1", dataj, {});
+										})
+										.catch(error => {
+											console.error('Error:', error);
+										});
 							}
 							</script>
                             <button onclick="myFunction('./jsons_plotly_rivedere/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
