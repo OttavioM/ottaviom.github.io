@@ -43,6 +43,21 @@
                             <div id="chart1"></div>	
 							<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 							<script>
+								// Asynchronous function to load JSON file
+								function loadJSONFile(filePath) {
+									return fetch(filePath)
+										.then(response => {
+											if (!response.ok) {
+												throw new Error(`Failed to load JSON file: ${response.status} ${response.statusText}`);
+											}
+											return response.json();
+										})
+										.catch(error => {
+											console.error('Error loading JSON file:', error);
+										});
+								};
+							</script>
+							<script>
 								let activeButton = null;
 								let graphs1 = loadJSONFile('./jsons_plotly_rivedere/scatter.json');	
 								function myFunction(jsonFilePath, buttonElement) {
@@ -70,21 +85,6 @@
 										})
 										.catch(error => {
 											console.error('Error:', error);
-										});
-								};
-							</script>
-							<script>
-								// Asynchronous function to load JSON file
-								function loadJSONFile(filePath) {
-									return fetch(filePath)
-										.then(response => {
-											if (!response.ok) {
-												throw new Error(`Failed to load JSON file: ${response.status} ${response.statusText}`);
-											}
-											return response.json();
-										})
-										.catch(error => {
-											console.error('Error loading JSON file:', error);
 										});
 								};
 							</script>
