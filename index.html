@@ -59,7 +59,6 @@
 							</script>
 							<script>
 								let activeButton = null;
-								let graphs1 = loadJSONFile('./jsons_plotly_rivedere/scatter.json');	
 								function myFunction(jsonFilePath, buttonElement) {
 									// Remove the active class from the previously active button
 									if (activeButton) {
@@ -80,6 +79,7 @@
 												console.log('JSON data loaded:', dataj);
 											}
 											Plotly.purge(chart1);
+											graphs1 = loadJSONFile('./jsons_plotly_rivedere/scatter.json');	
 											Plotly.newPlot("chart1", graphs1, {});
 											Plotly.plot("chart1", dataj, {});
 										})
