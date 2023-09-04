@@ -42,6 +42,40 @@
                         <div class="card-body">
                             <div id="chart1"></div>	
 							<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                            <script>
+                                // Function to add the "holding" class to existing buttons
+                                function addHoldingClassToButtons() {
+                                    const existingButtons = document.querySelectorAll('.existing-button');
+                                    existingButtons.forEach(button => {
+                                        button.classList.add('holding');
+                                    });
+                                }
+                            </script>
+                            <script>
+                                // Function to remove the "holding" class from existing buttons
+                                function removeHoldingClassFromButtons() {
+                                    const existingButtons = document.querySelectorAll('.existing-button');
+                                    existingButtons.forEach(button => {
+                                        button.classList.remove('holding');
+                                    });
+                                }
+                            </script>
+                            <script>
+                                // Function to toggle the "holding" class based on the switch state
+                                function toggleHoldingClass() {
+                                    const switchCheckbox = document.getElementById('holdSwitch');
+                                    
+                                    if (switchCheckbox.checked) {
+                                        addHoldingClassToButtons();
+                                    } else {
+                                        removeHoldingClassFromButtons();
+                                    }
+                                }
+                                // Get the checkbox element
+                                const switchCheckbox = document.getElementById('holdSwitch');
+                                // Add a change event listener to the checkbox
+                                switchCheckbox.addEventListener('change', toggleHoldingClass);
+                            </script>
 							<script>
 								// Asynchronous function to load JSON file
 								function loadJSONFile(filePath) {
@@ -83,7 +117,11 @@
 										buttonElement.classList.add('active');
 										activeButton = buttonElement;
 									}
-                                    loadJSONAndStore('./jsons_plotly_rivedere/scatter.json')
+
+                                    const switchCheckbox = document.getElementById('mySwitch');
+                                    if (!switchCheckbox.checked) { // Use ! to check if it's not checked
+                                        loadJSONAndStore('./jsons_plotly_rivedere/scatter.json');
+                                    }
 									let dataj;
 									loadJSONFile(jsonFilePath)
 										.then(data => {
@@ -135,9 +173,9 @@
                             <button onclick="myFunction('./jsons_plotly_rivedere/Oceania2.json',this)" type="button" class="btn btn-outline-primary" id="btnOc2">Oceania 2</button>
 							<button onclick="myFunction_reset_view('./jsons_plotly_rivedere/scatter.json',this)" type="button" class="btn btn-outline-primary" id="btnRset">Reset View</button>
                             <!-- Rounded switch -->
-                            <label class="switch">
-                                <input type="checkbox">
-                                <span class="slider round"></span>
+                            <label class="switch3" >
+                                <input type="checkbox" id="holdSwitch"/>
+                                <div></div>
                             </label>
                             <p class="card-text" style="padding-top: 3rem;">
                                 The color identifies the relative energy of each family, it is expressed in percentage, 

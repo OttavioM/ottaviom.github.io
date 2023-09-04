@@ -53,71 +53,64 @@
   /* Additional styles as needed */
 }
 /*-------------THE SWITCH BUTTON----------------*/
-/* The switch - the box around the slider */
-.switch {
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
+/*SWITCH 3 ------------------------------------------------*/
+
+.switch3{
   position: relative;
   display: inline-block;
-  width: 60px;
-  height: 34px;
-}
-
-/* Hide default HTML checkbox */
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-/* The slider */
-.slider {
-  position: absolute;
+  width: 80px;
+  height: 37px;
+  border-radius: 37px;
+  background-color: #f3f4f4;
   cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  transition: all .3s;
+  overflow: hidden;
+  box-shadow: 0px 0px 2px rgba(0,0,0, .3);
 }
-
-.slider:before {
+.switch3 input{
+  display: none;
+}
+.switch3 input:checked + div{
+  left: calc(80px - 32px);
+  box-shadow: 0px 0px 0px white;
+}
+.switch3 div{
   position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
+  width: 27px;
+  height: 27px;
+  border-radius: 27px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  top: 5px;
+  left: 5px;
+  box-shadow: 0px 0px 1px rgb(150,150,150);
+  transition: all .3s;
+}
+.switch3 div:before, .switch3 div:after{
+  position: absolute;
+  content: 'ON';
+  width: calc(80px - 40px);
+  height: 37px;
+  line-height: 37px;
+  font-family: 'Varela Round';
+  font-size: 14px;
+  font-weight: bold;
+  top: -5px;
+}
+.switch3 div:before{
+  content: 'OFF';
+  color: rgb(120,120,120);
+  left: 100%;
+}
+.switch3 div:after{
+  content: 'ON';
+  right: 100%;
+  color: white;
 }
 
-.slider:after {
-  content:"holding";
-
-}
-
-input:checked + .slider {
-  background-color: #2196F3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
+.switch3-checked{
+  background-color : #e74c3c;
+  box-shadow: none;
 }
 /* --------------------------------- */
