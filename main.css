@@ -114,7 +114,7 @@
   box-shadow: none;
 }
 
-.ball{
+/* .ball{
   background-color: #001e3d;
   border-radius: 50%;
   height: 22px;
@@ -123,14 +123,14 @@
   top: 2px;
   left: 2px;
   transition: transform .2s linear;
-}
+} */
 
-.ball:before:checked{
+/* .ball:before:checked{
   content: url(flag-ukraine-circle.svg);
   left: 50px;
-}
+} */
 
-.ball:checked:after{
+/* .ball:checked:after{
   left: 0;
-}
+} */
 /* --------------------------------- */
