@@ -89,7 +89,7 @@
 }
 .switch3 div:before, .switch3 div:after{
   position: absolute;
-  content: 'ON';
+  content: '';
   width: calc(80px - 40px);
   height: 37px;
   line-height: 37px;
@@ -99,12 +99,12 @@
   top: -5px;
 }
 .switch3 div:before{
-  content: 'OFF';
+  content: '';
   color: rgb(120,120,120);
   left: 100%;
 }
 .switch3 div:after{
-  content: 'ON';
+  content: 'HOLD';
   right: 100%;
   color: white;
 }
