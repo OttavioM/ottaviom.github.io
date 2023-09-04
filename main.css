@@ -114,6 +114,8 @@
   box-shadow: none;
 }
 
+.button-wrapper{text-align:center;display:inline-block; margin:10px;}
+
 /* .ball{
   background-color: #001e3d;
   border-radius: 50%;
