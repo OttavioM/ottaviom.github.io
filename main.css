@@ -60,7 +60,7 @@
 .switch3{
   position: relative;
   display: inline-block;
-  width: 80px;
+  width: 119px;
   height: 37px;
   border-radius: 37px;
   background-color: #f3f4f4;
@@ -73,7 +73,7 @@
   display: none;
 }
 .switch3 input:checked + div{
-  left: calc(80px - 32px);
+  left: calc(119px - 32px);
   box-shadow: 0px 0px 0px white;
 }
 .switch3 div{
@@ -90,7 +90,7 @@
 .switch3 div:before, .switch3 div:after{
   position: absolute;
   content: '';
-  width: calc(80px - 40px);
+  width: calc(113px - 40px);
   height: 37px;
   line-height: 37px;
   font-family: 'Varela Round';
@@ -104,7 +104,7 @@
   left: 100%;
 }
 .switch3 div:after{
-  content: 'HOLD';
+  content: 'HOLDED';
   right: 100%;
   color: rgb(0, 0, 0);
 }
