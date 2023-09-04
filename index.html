@@ -83,6 +83,7 @@
 										buttonElement.classList.add('active');
 										activeButton = buttonElement;
 									}
+                                    loadJSONAndStore('./jsons_plotly_rivedere/scatter.json')
 									let dataj;
 									loadJSONFile(jsonFilePath)
 										.then(data => {
@@ -101,6 +102,10 @@
 							</script>
 							<script>
 								function myFunction_reset_view(jsonFilePath,buttonElement) {
+                                    // Remove the active class from the previously active button
+									if (activeButton) {
+										activeButton.classList.remove('active');
+									}
 									loadJSONFile(jsonFilePath)
 										.then(data => {
 											if (data) {
