@@ -113,4 +113,24 @@
   background-color : #e74c3c;
   box-shadow: none;
 }
+
+.ball{
+  background-color: #001e3d;
+  border-radius: 50%;
+  height: 22px;
+  width: 22px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform .2s linear;
+}
+
+.ball:before:checked{
+  content: url(flag-ukraine-circle.svg);
+  left: 50px;
+}
+
+.ball:checked:after{
+  left: 0;
+}
 /* --------------------------------- */
