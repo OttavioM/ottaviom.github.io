@@ -40,7 +40,8 @@
                 <div class="row p-4">
                     <div class="card m-auto" style="width: 100%;">
                         <div class="card-body">
-                            <div id="chart1"></div>	
+                            <div id="chart1"></div>
+                            <!---------------- LOADING THE SCRIPTS ----------------------->
 							<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
                             <!-- --------------SWITCH BUTTON------------------ -->
                             <script>
@@ -78,6 +79,7 @@
                                 switchCheckbox.addEventListener('change', toggleHoldingClass);
                             </script>
                             <!-- --------------END SWITCH BUTTON------------------ -->
+                            <!--------------PLOT PLOTLY WITH JS --------------------->
 							<script>
 								// Asynchronous function to load JSON file
 								function loadJSONFile(filePath) {
@@ -164,6 +166,8 @@
 								loadJSONAndStore('./jsons_plotly_rivedere/scatter.json')
 								myFunction_reset_view('./jsons_plotly_rivedere/scatter.json',{});
 							</script> 
+                            <!-------------- PLOT PLOTLY WITH JS --------------------->
+                            <!--------------- END LOAD THE SCRIPTS ------------->
                             <button onclick="myFunction('./jsons_plotly_rivedere/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
                             <button onclick="myFunction('./jsons_plotly_rivedere/Europe.json',this)" type="button" class="btn btn-outline-primary" id="btnEUr">Europe</button>
                             <button onclick="myFunction('./jsons_plotly_rivedere/AmericaN.json',this)" type="button" class="btn btn-outline-primary" id="btnAmN">North America</button>
