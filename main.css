@@ -46,6 +46,10 @@
   display: flex;
 }
 
+/* .js-plotly-plot .plotly .user-select-none {
+  height: 100%!important;
+} */
+
 /* Define a style for the active button */
 .btn.active {
   background-color: #9AD8F3;
