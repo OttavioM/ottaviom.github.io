@@ -33,20 +33,19 @@
         <div class="col-4"></div>
     </div>
 
-        <!-- BLOCK WHERE THERE IS THE REAL INDEX.HTML CONTENT -->
+    <!-- BLOCK WHERE THERE IS THE REAL INDEX.HTML CONTENT -->
     <!-- DAY NIGHT BUTTON -->
     <!-- <div>
         <button id=change-background>Night Mode</button>
     </div> -->
-    <div class="row p-4">
-        <div class="row p-4">
-            <div class="toggle toggle--daynight">
-                <input type="checkbox" id="toggle--daynight" class="toggle--checkbox">
-                <label class="toggle--btn" for="toggle--daynight"><span class="toggle--feature"></span></label>
-            </div>
+    <div class="col-2 col-day-night">
+        <div class="toggle toggle--daynight">
+            <input type="checkbox" id="toggle--daynight" class="toggle--checkbox">
+            <label class="toggle--btn" for="toggle--daynight"><span class="toggle--feature"></span></label>
         </div>
+    </div>
     <!-- END DAY NIGHT BUTTON -->
-
+    <div class="row p-4">
         <div class="card m-auto day-night">
             <div class="card-body day-night">
                 <div id="chart1"></div>
@@ -192,7 +191,59 @@
                     <button onclick="myFunction_reset_view('./jsons_plotly_rivedere/scatter.json',this)" type="button" class="btn btn-outline-primary" id="btnRset">Reset View</button>
                 </div>
                 <div class="row p-4">
-                    <div class="button-wrapper">
+                    <div class="col-2 knob-col">
+                        <!-- KNOB SWITCH -->
+                        <div class="container">
+                            <!-- OUTER SHADOW -->
+                            <div class="de">
+                        
+                                <!-- TEXT -->
+                                <div class="den">
+                        
+                                    <!-- LINE -->
+                                    <hr class="line">
+                                    <hr class="line">
+                                    <hr class="line">
+                        
+                                    <!-- SWITCH -->
+                                    <div class="switch">
+                        
+                                        <!-- TEXT -->
+                                        <label for="switch_off"><span>OFF</span></label>
+                                        <label for="switch_1"><span>1</span></label>
+                                        <label for="switch_2"><span>2</span></label>
+                                        <label for="switch_3"><span>3</span></label>
+                                        <label for="switch_4"><span>4</span></label>
+                                        <label for="switch_5"><span>5</span></label>
+                        
+                                        <!-- INPUT -->
+                                        <input id="switch_off" name="switch" checked type="radio">
+                                        <input id="switch_1" name="switch" type="radio">
+                                        <input id="switch_2" name="switch" type="radio">
+                                        <input id="switch_3" name="switch" type="radio">
+                                        <input id="switch_4" name="switch" type="radio">
+                                        <input id="switch_5" name="switch" type="radio">
+                        
+                                        <!-- LIGHT -->
+                                        <div class="light"><span></span></div>
+                        
+                                        <!-- DOT -->
+                                        <div class="dot"><span></span></div>
+                        
+                                        <!-- CENTER -->
+                                        <div class="dene">
+                                            <div class="denem">
+                                                <div class="deneme">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END KNOB SWITCH -->
+                    </div>
+                    <div class="col-2 button-wrapper">
                         <p> HOLD THE PLOTS</p>
                         <!-- Rounded switch -->
                         <label class="switch3" >
@@ -216,58 +267,6 @@
             </div>
         </div>
     </div>
-
-    <!-- knob switch -->
-    <div class="container">
-
-        <!-- OUTER SHADOW -->
-        <div class="de">
-    
-            <!-- TEXT -->
-            <div class="den">
-    
-                <!-- LINE -->
-                <hr class="line">
-                <hr class="line">
-                <hr class="line">
-    
-                <!-- SWITCH -->
-                <div class="switch">
-    
-                    <!-- TEXT -->
-                    <label for="switch_off"><span>OFF</span></label>
-                    <label for="switch_1"><span>1</span></label>
-                    <label for="switch_2"><span>2</span></label>
-                    <label for="switch_3"><span>3</span></label>
-                    <label for="switch_4"><span>4</span></label>
-                    <label for="switch_5"><span>5</span></label>
-    
-                    <!-- INPUT -->
-                    <input id="switch_off" name="switch" checked type="radio">
-                    <input id="switch_1" name="switch" type="radio">
-                    <input id="switch_2" name="switch" type="radio">
-                    <input id="switch_3" name="switch" type="radio">
-                    <input id="switch_4" name="switch" type="radio">
-                    <input id="switch_5" name="switch" type="radio">
-    
-                    <!-- LIGHT -->
-                    <div class="light"><span></span></div>
-    
-                    <!-- DOT -->
-                    <div class="dot"><span></span></div>
-    
-                    <!-- CENTER -->
-                    <div class="dene">
-                        <div class="denem">
-                            <div class="deneme">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END KNOB SWITCH -->
 
     <!-- plotly CDN -->
 
