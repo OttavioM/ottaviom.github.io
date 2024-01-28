@@ -28,41 +28,31 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a>
                 <ul>
-                    <li><a href="#">School</a>
+                    <li><a href="#">JONSWAP</a>
                     <ul>
-                        <li><a href="#">Lidership</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Locations</a></li>
-                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Best γ fitting method</a></li>
+                        <li><a href="#">JONSWAP spectrum climate variability</a></li>
                     </ul>
                     </li>
-                    <li><a href="#">Study</a>
+                    <li><a href="#">Directional wave spectrum</a>
                     <ul>
-                        <li><a href="#">Undergraduate</a></li>
-                        <li><a href="#">Masters</a></li>
-                        <li><a href="#">International</a></li>
-                        <li><a href="#">Online</a></li>
+                        <li><a href="#">Introduction</a></li>
+                        <li><a href="#">Wave Partitions</a></li>
+                        <li><a href="#">Wave Systems</a></li>
                     </ul>
                     </li>
                     <li><a href="#">Research</a>
                     <ul>
-                        <li><a href="#">Undergraduate research</a></li>
-                        <li><a href="#">Masters research</a></li>
-                        <li><a href="#">Funding</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="#">Something</a>
-                    <ul>
-                        <li><img src="https://placeimg.com/300/200/nature"></li>
+                        <li><a href="#">Related Papers</a></li>
                     </ul>
                     </li>
                 </ul>
                 </li>
-                <li><a href="#">News</a>
+                <li><a href="#">Dashboards/Viewers</a>
                 <ul>
-                    <li><a href="#">Today</a></li>
-                    <li><a href="#">Calendar</a></li>
-                    <li><a href="#">Sport</a></li>
+                    <li><a href="#">Wave Partitions</a></li>
+                    <li><a href="Swell_wave_systems_dashboard.html">Swell Wave Systems</a></li>
+                    <li><a href="#">Wave Systems</a></li>
                 </ul>
                 </li>
                 <li><a href="#">Contact us</a></li>
@@ -171,7 +161,7 @@
 
                         const switchCheckbox = document.getElementById('holdSwitch');
                         if (!switchCheckbox.checked) { // Use ! to check if it's not checked
-                            loadJSONAndStore('./jsons_plotly_rivedere/scatter.json');
+                            loadJSONAndStore('./jsons_plotly/sum_99/scatter.json');
                         }
                         let dataj;
                         loadJSONFile(jsonFilePath)
@@ -211,23 +201,23 @@
                 </script>
                 <div class="card-body">
                     <script>
-                        loadJSONAndStore('./jsons_plotly_rivedere/scatter.json')
-                        myFunction_reset_view('./jsons_plotly_rivedere/scatter.json',{});
+                        loadJSONAndStore('./jsons_plotly/sum_99/scatter.json')
+                        myFunction_reset_view('./jsons_plotly/sum_99/scatter.json',{});
                     </script> 
                 </div>
                 <!-------------- PLOT PLOTLY WITH JS --------------------->
                 <!--------------- END LOAD THE SCRIPTS ------------->
                 <div class="container">
-                    <button onclick="myFunction('./jsons_plotly_rivedere/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
-                    <button onclick="myFunction('./jsons_plotly_rivedere/Europe.json',this)" type="button" class="btn btn-outline-primary" id="btnEUr">Europe</button>
-                    <button onclick="myFunction('./jsons_plotly_rivedere/AmericaN.json',this)" type="button" class="btn btn-outline-primary" id="btnAmN">North America</button>
-                    <button onclick="myFunction('./jsons_plotly_rivedere/AmericaS.json',this)" type="button" class="btn btn-outline-primary" id="btnAmS">South America</button>
-                    <button onclick="myFunction('./jsons_plotly_rivedere/Asia1.json',this)" type="button" class="btn btn-outline-primary" id="btnAs1">Asia 1</button>
-                    <button onclick="myFunction('./jsons_plotly_rivedere/Asia2.json',this)" type="button" class="btn btn-outline-primary" id="btnAs2">Asia 2</button>
-                    <button onclick="myFunction('./jsons_plotly_rivedere/Asia3.json',this)" type="button" class="btn btn-outline-primary" id="btnAs3">Asia 3</button>
-                    <button onclick="myFunction('./jsons_plotly_rivedere/Oceania1.json',this)" type="button" class="btn btn-outline-primary" id="btnOc1">Oceania 1</button>
-                    <button onclick="myFunction('./jsons_plotly_rivedere/Oceania2.json',this)" type="button" class="btn btn-outline-primary" id="btnOc2">Oceania 2</button>
-                    <button onclick="myFunction_reset_view('./jsons_plotly_rivedere/scatter.json',this)" type="button" class="btn btn-outline-primary" id="btnRset">Reset View</button>
+                    <button onclick="myFunction('./jsons_plotly/sum_99/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
+                    <button onclick="myFunction('./jsons_plotly/sum_99/Europe.json',this)" type="button" class="btn btn-outline-primary" id="btnEUr">Europe</button>
+                    <button onclick="myFunction('./jsons_plotly/sum_99/AmericaN.json',this)" type="button" class="btn btn-outline-primary" id="btnAmN">North America</button>
+                    <button onclick="myFunction('./jsons_plotly/sum_99/AmericaS.json',this)" type="button" class="btn btn-outline-primary" id="btnAmS">South America</button>
+                    <button onclick="myFunction('./jsons_plotly/sum_99/Asia1.json',this)" type="button" class="btn btn-outline-primary" id="btnAs1">Asia 1</button>
+                    <button onclick="myFunction('./jsons_plotly/sum_99/Asia2.json',this)" type="button" class="btn btn-outline-primary" id="btnAs2">Asia 2</button>
+                    <button onclick="myFunction('./jsons_plotly/sum_99/Asia3.json',this)" type="button" class="btn btn-outline-primary" id="btnAs3">Asia 3</button>
+                    <button onclick="myFunction('./jsons_plotly/sum_99/Oceania1.json',this)" type="button" class="btn btn-outline-primary" id="btnOc1">Oceania 1</button>
+                    <button onclick="myFunction('./jsons_plotly/sum_99/Oceania2.json',this)" type="button" class="btn btn-outline-primary" id="btnOc2">Oceania 2</button>
+                    <button onclick="myFunction_reset_view('./jsons_plotly/sum_99/scatter.json',this)" type="button" class="btn btn-outline-primary" id="btnRset">Reset View</button>
                 </div>
                 <div class="row p-4">
                     <div class="col-2 knob-col">

@@ -45,11 +45,12 @@
 
 .mapboxgl-canvas{
   display: flex;
+  /* height: 1000px!important; */
 }
 
-/* .js-plotly-plot .plotly .user-select-none {
-  height: 100%!important;
-} */
+#chart1{
+  height: 860px;
+}
 
 /* Define a style for the active button */
 .btn.active {
@@ -803,7 +804,9 @@
     }
   }
 
-/* NAVIGATION BAR */
+/* ======================================
+NAVIGATION BAR 
+=========================================*/
 
 a {
   color: #333;
