@@ -165,8 +165,23 @@
                     <div class="h3">
                         Swell wave systems quiver plot
                     </div>
+                    <div class="row p-4">
+                        <p class="card-text day-night" style="padding-top: 0.5rem;">
+                            To see the quiver plot information of each swell wave system select one of the world region first.
+                            Once the arrows (quiver plot) appear, a colorbar is loaded on the left and a zoom over the interested region is applied.
+                            The meaning of the arrows are:
+                            <ul style="margin-left: 3rem">
+                                <li>Color: identifies the relative energy (%) of each swell wave system, the colorbar show the intensity;</li>
+                                <li>Size: represents the mean Tp;</li>
+                                <li>Direction: represents the mean MWD.</li>
+                            </ul>
+                        <!-- 
+                            When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+                        \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\] -->
+                        </p>
+                    </div>
                 </div>
-                <div class="container p-20">
+                <div class="container p-20" style="justify-content: center; display:flex; flex-wrap: wrap;">
                     <button onclick="myFunction('./jsons_plotly/sum_99/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
                     <button onclick="myFunction('./jsons_plotly/sum_99/Europe.json',this)" type="button" class="btn btn-outline-primary" id="btnEUr">Europe</button>
                     <button onclick="myFunction('./jsons_plotly/sum_99/AmericaN.json',this)" type="button" class="btn btn-outline-primary" id="btnAmN">North America</button>
@@ -178,26 +193,15 @@
                     <button onclick="myFunction('./jsons_plotly/sum_99/Oceania2.json',this)" type="button" class="btn btn-outline-primary" id="btnOc2">Oceania 2</button>
                     <button onclick="myFunction_reset_view('./jsons_plotly/sum_99/scatter.json',this)" type="button" class="btn btn-outline-primary" id="btnRset">Reset View</button>
                 </div>
-                <div class="row p-4">
+                <div class="row p-4" style="justify-content: center;flex-wrap: wrap;">
+                    <p style="text-align: center;"> HOLD THE PLOTS</p>
                     <div class="col-2 button-wrapper">
-                        <p> HOLD THE PLOTS</p>
                         <!-- Rounded switch -->
                         <label class="switch3" >
                             <input type="checkbox" id="holdSwitch"/>
                             <div class="ball"></div>
                         </label>
                     </div>
-                </div>
-                <div class="row p-4">
-                    <p class="card-text day-night" style="padding-top: 3rem;">
-                        The color identifies the relative energy of each family, it is expressed in percentage, 
-                        \(m_{0_{WSys_i}} \over m_{0_{WSys_{tot}}}\). The size of the arrow represents the time averaged \(T_p\), 
-                        whereas the number of the arrow are the number of wave systems that exist in that location, 
-                        the direction of the arrow represent the time averaged \(MWD\) where the wave systems come from.
-                    <!-- 
-                        When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-                    \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\] -->
-                    </p>
                 </div>
             </div>
             </div>
