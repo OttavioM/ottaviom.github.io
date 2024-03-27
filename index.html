@@ -20,61 +20,13 @@
 <!-- <body style = 'background-color: black;'> -->
 <body class = "day-night" id = "day-night">
     <div class="row">
-        <!-- NAVIGATION BAR -->
-        <!-- <div class=" menu-container">
-            <div class="menu">
-                <a href="https://ihcantabria.com/" class="logo"><img src="https://ihcantabria.com/wp-content/uploads/2019/02/Logo-IHCantabria-Universidad-Cantabria-whitev2-copia-2.png" width="140" height="auto" alt="IHCantabria" id="logo"></a>
-            <ul class="clearfix">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a>
-                <ul>
-                    <li><a href="#">JONSWAP</a>
-                    <ul>
-                        <li><a href="#">Best γ fitting method</a></li>
-                        <li><a href="#">JONSWAP spectrum climate variability</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="#">Directional wave spectrum</a>
-                    <ul>
-                        <li><a href="#">Introduction</a></li>
-                        <li><a href="#">Wave Partitions</a></li>
-                        <li><a href="#">Wave Systems</a></li>
-                    </ul>
-                    </li>
-                    <li><a href="#">Research</a>
-                    <ul>
-                        <li><a href="#">Related Papers</a></li>
-                    </ul>
-                    </li>
-                </ul>
-                </li>
-                <li><a href="#">Dashboards/Viewers</a>
-                <ul>
-                    <li><a href="#">Wave Partitions</a></li>
-                    <li><a href="Swell_wave_systems_dashboard.html">Swell Wave Systems</a></li>
-                    <li><a href="#">Wave Systems</a></li>
-                </ul>
-                </li>
-                <li><a href="#">Contact us</a></li>
-            </ul>
-            </div>
-        </div> -->
-        <!-- END OF THE NAVIGATION BAR -->
     </div>
 
     <!-- BLOCK WHERE THERE IS THE REAL INDEX.HTML CONTENT -->
-    <!-- DAY NIGHT BUTTON -->
-    <!-- <div>
-        <button id=change-background>Night Mode</button>
-    </div> -->
-    <div class="col-2 col-day-night">
-        <div class="toggle toggle--daynight">
-            <input type="checkbox" id="toggle--daynight" class="toggle--checkbox">
-            <label class="toggle--btn" for="toggle--daynight"><span class="toggle--feature"></span></label>
-        </div>
-    </div>
-    <!-- END DAY NIGHT BUTTON -->
     <div class="row p-4">
+        <div class="h2" style = "text-align: center;">
+            WAVE CLIMATE SWELL SYSTEMS
+        </div>
         <div class="card m-auto day-night">
             <div class="card-body day-night">
                 <div id="chart1"></div>
@@ -200,14 +152,21 @@
                     };
                 </script>
                 <div class="card-body">
-                    <script>
-                        loadJSONAndStore('./jsons_plotly/sum_99/scatter.json')
-                        myFunction_reset_view('./jsons_plotly/sum_99/scatter.json',{});
-                    </script> 
+                    <div class="row p-4">
+                        <script>
+                            loadJSONAndStore('./jsons_plotly/sum_99/scatter.json')
+                            myFunction_reset_view('./jsons_plotly/sum_99/scatter.json',{});
+                        </script> 
+                    </div>
                 </div>
                 <!-------------- PLOT PLOTLY WITH JS --------------------->
                 <!--------------- END LOAD THE SCRIPTS ------------->
-                <div class="container">
+                <div class="row p-10">
+                    <div class="h3">
+                        Swell wave systems quiver plot
+                    </div>
+                </div>
+                <div class="container p-20">
                     <button onclick="myFunction('./jsons_plotly/sum_99/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
                     <button onclick="myFunction('./jsons_plotly/sum_99/Europe.json',this)" type="button" class="btn btn-outline-primary" id="btnEUr">Europe</button>
                     <button onclick="myFunction('./jsons_plotly/sum_99/AmericaN.json',this)" type="button" class="btn btn-outline-primary" id="btnAmN">North America</button>
@@ -220,58 +179,6 @@
                     <button onclick="myFunction_reset_view('./jsons_plotly/sum_99/scatter.json',this)" type="button" class="btn btn-outline-primary" id="btnRset">Reset View</button>
                 </div>
                 <div class="row p-4">
-                    <div class="col-2 knob-col" style = "display: none;">
-                        <!-- KNOB SWITCH -->
-                        <div class="container">
-                            <!-- OUTER SHADOW -->
-                            <div class="de">
-                        
-                                <!-- TEXT -->
-                                <div class="den">
-                        
-                                    <!-- LINE -->
-                                    <hr class="line">
-                                    <hr class="line">
-                                    <hr class="line">
-                        
-                                    <!-- SWITCH -->
-                                    <div class="switch">
-                        
-                                        <!-- TEXT -->
-                                        <label for="switch_off"><span>OFF</span></label>
-                                        <label for="switch_1"><span>1</span></label>
-                                        <label for="switch_2"><span>2</span></label>
-                                        <label for="switch_3"><span>3</span></label>
-                                        <label for="switch_4"><span>4</span></label>
-                                        <label for="switch_5"><span>5</span></label>
-                        
-                                        <!-- INPUT -->
-                                        <input id="switch_off" name="switch" checked type="radio">
-                                        <input id="switch_1" name="switch" type="radio">
-                                        <input id="switch_2" name="switch" type="radio">
-                                        <input id="switch_3" name="switch" type="radio">
-                                        <input id="switch_4" name="switch" type="radio">
-                                        <input id="switch_5" name="switch" type="radio">
-                        
-                                        <!-- LIGHT -->
-                                        <div class="light"><span></span></div>
-                        
-                                        <!-- DOT -->
-                                        <div class="dot"><span></span></div>
-                        
-                                        <!-- CENTER -->
-                                        <div class="dene">
-                                            <div class="denem">
-                                                <div class="deneme">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END KNOB SWITCH -->
-                    </div>
                     <div class="col-2 button-wrapper">
                         <p> HOLD THE PLOTS</p>
                         <!-- Rounded switch -->
