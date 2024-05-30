@@ -10,11 +10,10 @@
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="/main.css" type="text/css">
 
-	<!-- {% if title %}
-		<title>CodeWithPrince-{{title}}</title>
-	{% else %}
-		<title>CodeWithPrince</title>
-	{% endif %} -->
+    <!-- LOADING THE NAV BAR NEED THE QUERY OF JS -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="/js/navbar-js.js"></script>
+    <script type="text/javascript" src="/js/day-night-js.js"></script>
 
 </head>
 <body class = "day-night" id = "day-night">
@@ -60,9 +59,17 @@
         </div>
         <!-- END OF THE NAVIGATION BAR -->
     </div>
-
+<!-- DAY NIGHT BUTTON -->
+                    <!-- <div>
+                        <button id=change-background>Night Mode</button>
+                    </div> -->
+                    <!-- <div class="col-2 col-day-night">
+                        <div class="toggle toggle--daynight">
+                            <input type="checkbox" id="toggle--daynight" class="toggle--checkbox">
+                            <label class="toggle--btn" for="toggle--daynight"><span class="toggle--feature"></span></label>
+                        </div>
+                    </div> -->
+                    <!-- END DAY NIGHT BUTTON -->
 </body>
-<!-- LOADING THE NAV BAR NEED THE QUERY OF JS -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script type="text/javascript" src="/js/navbar-js.js"></script>
+
 </html>
