@@ -15,6 +15,18 @@
     <script type="text/javascript" src="/js/navbar-js.js"></script>
     <script type="text/javascript" src="/js/day-night-js.js"></script>
 
+    <script>
+        $(document).ready(function () {
+ 
+            $('.menu > a')
+                    .click(function (e) {
+                $('.menu > a')
+                    .removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+    </script>
+
 </head>
 <body class = "day-night" id = "day-night">
 
@@ -25,7 +37,7 @@
                 <a href="https://ihcantabria.com/" class="logo"><img src="https://ihcantabria.com/wp-content/uploads/2019/02/Logo-IHCantabria-Universidad-Cantabria-whitev2-copia-2.png" width="140" height="auto" alt="IHCantabria" id="logo"></a>
             <ul class="clearfix">
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="#">About</a>
+                <li><a class = "active" href="#">About</a>
                 <ul>
                     <li><p>JONSWAP</p>
                     <ul>

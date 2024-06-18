@@ -828,10 +828,13 @@ a {
   background: #BED7DC;
 }
 
+.menu > .active a {
+  background-color: #e1c348;
+}
+
 .menu > ul > li > ul > li a:hover {
   background: #BED7DC;
 }
-
 
 .menu-container {
   /* margin: 0 auto; */
