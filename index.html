@@ -50,13 +50,16 @@
     <!-- END DAY NIGHT BUTTON -->
     <div class="row p-4">
         
-        <div class="h2" style = "text-align: center;">
+        <div class="h2" id="waveClimateText" style="text-align: center;">
             WAVE CLIMATE SWELL SYSTEMS
         </div>
         <div class="container ws-sw-button">
-            <button onclick="myFunction('/jsons_plotly/sum_99/Africa.json',this)" type="button" class="btn btn-outline-primary css-right-space" id="SWWSYs">Swell WSYs</button>
-            <button onclick="myFunction('/jsons_plotly/sum_99/Europe.json',this)" type="button" class="btn btn-outline-primary" id="WSYs">WSYs</button>
+            <button onclick="handleButtonClick('SWWSYs')" type="button" class="btn btn-wsys-style css-right-space" id="SWWSYs">Swell WSYs</button>
+            <button onclick="handleButtonClick('WSYs')" type="button" class="btn btn-wsys-style" id="WSYs">WSYs</button>
         </div>
+    
+        <script src="/js/swwsys-wsys-btn.js"></script>
+
         <div class="card m-auto day-night">
             <div class="card-body day-night">
                 <div id="chart1"></div>
