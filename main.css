@@ -50,10 +50,15 @@
 
 #chart1{
   height: 45rem;
+  max-width: 95rem;
 }
 
 .card{
-  max-width: 105rem;
+  max-width: 95rem;
+}
+
+.container.p {
+  max-width: 95rem;
 }
 
 /* Define a style for the active button */
@@ -833,8 +838,14 @@
 /* ======================================
 NAVIGATION BAR 
 =========================================*/
+/* Highlight style for the active link */
+/* Default style for menu items */
+.menu ul li a.active {
+  background-color: #ac03ae; /* Example background color for active link */
+  color: #fff; /* Text color for active link */
+}
 
-a {
+.menu-container a {
   color: #333!important;
 }
 
@@ -850,7 +861,7 @@ a {
   background: #BED7DC;
 }
 
-.menu-container {
+.menu {
   /* margin: 0 auto; */
   background: #5391fd;
 }
@@ -1062,8 +1073,9 @@ Mobile style's
 ============================================= */
 
 .footer-container{
-	max-width: 20000px;
+	max-width: 150rem;
 	margin:auto;
+  background-color: #5391fd;
 }
 .footer-row{
 	display: flex;
@@ -1110,6 +1122,7 @@ ul{
 	color: #bbbbbb;
 	display: block;
 	transition: all 0.3s ease;
+  font-weight: 500;
 }
 .footer-col ul li a:hover{
 	color: #ffffff;
@@ -1145,6 +1158,17 @@ ul{
 }
 }
 
+.social-links {
+  display: flex;
+  justify-content: flex-start; /* Optional: adjust as needed */
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  margin: 0 10px; /* Adjust spacing between icons */
+  font-size: 24px; /* Adjust icon size */
+}
+
 /*===========================================
 SWs WSYs and WSYs buttons style
 =============================================*/
@@ -1172,5 +1196,4 @@ SWs WSYs and WSYs buttons style
   background-color: lightgreen;
   color: white;
 }
-
 
