@@ -67,25 +67,26 @@
                     <!---------------- LOADING THE SCRIPTS ----------------------->
                     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
                     <script src="/js/plotly-reusable.js"></script>
-                    <div class="card-body">
+                    <div class="card-body" id="card-body">
                         <script>
                             loadJSONAndStore('/jsons_plotly/sum_99/scatter.json')
                             myFunction_reset_view('/jsons_plotly/sum_99/scatter.json',{});
                         </script> 
                     </div>
+                    
                     <!-------------- PLOT PLOTLY WITH JS --------------------->
                     <!--------------- END LOAD THE SCRIPTS ------------->
                     <div class="container">
-                        <button onclick="myFunction('./jsons_plotly/sum_99/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
-                        <button onclick="myFunction('./jsons_plotly/sum_99/Europe.json',this)" type="button" class="btn btn-outline-primary" id="btnEUr">Europe</button>
-                        <button onclick="myFunction('./jsons_plotly/sum_99/AmericaN.json',this)" type="button" class="btn btn-outline-primary" id="btnAmN">North America</button>
-                        <button onclick="myFunction('./jsons_plotly/sum_99/AmericaS.json',this)" type="button" class="btn btn-outline-primary" id="btnAmS">South America</button>
-                        <button onclick="myFunction('./jsons_plotly/sum_99/Asia1.json',this)" type="button" class="btn btn-outline-primary" id="btnAs1">Asia 1</button>
-                        <button onclick="myFunction('./jsons_plotly/sum_99/Asia2.json',this)" type="button" class="btn btn-outline-primary" id="btnAs2">Asia 2</button>
-                        <button onclick="myFunction('./jsons_plotly/sum_99/Asia3.json',this)" type="button" class="btn btn-outline-primary" id="btnAs3">Asia 3</button>
-                        <button onclick="myFunction('./jsons_plotly/sum_99/Oceania1.json',this)" type="button" class="btn btn-outline-primary" id="btnOc1">Oceania 1</button>
-                        <button onclick="myFunction('./jsons_plotly/sum_99/Oceania2.json',this)" type="button" class="btn btn-outline-primary" id="btnOc2">Oceania 2</button>
-                        <button onclick="myFunction_reset_view('./jsons_plotly/sum_99/scatter.json',this)" type="button" class="btn btn-outline-primary" id="btnRset">Reset View</button>
+                        <button onclick="myFunction('/jsons_plotly/sum_99/Africa.json',this)" type="button" class="btn btn-outline-primary" id="btnAfr">Africa</button>
+                        <button onclick="myFunction('/jsons_plotly/sum_99/Europe.json',this)" type="button" class="btn btn-outline-primary" id="btnEUr">Europe</button>
+                        <button onclick="myFunction('/jsons_plotly/sum_99/AmericaN.json',this)" type="button" class="btn btn-outline-primary" id="btnAmN">North America</button>
+                        <button onclick="myFunction('/jsons_plotly/sum_99/AmericaS.json',this)" type="button" class="btn btn-outline-primary" id="btnAmS">South America</button>
+                        <button onclick="myFunction('/jsons_plotly/sum_99/Asia1.json',this)" type="button" class="btn btn-outline-primary" id="btnAs1">Asia 1</button>
+                        <button onclick="myFunction('/jsons_plotly/sum_99/Asia2.json',this)" type="button" class="btn btn-outline-primary" id="btnAs2">Asia 2</button>
+                        <button onclick="myFunction('/jsons_plotly/sum_99/Asia3.json',this)" type="button" class="btn btn-outline-primary" id="btnAs3">Asia 3</button>
+                        <button onclick="myFunction('/jsons_plotly/sum_99/Oceania1.json',this)" type="button" class="btn btn-outline-primary" id="btnOc1">Oceania 1</button>
+                        <button onclick="myFunction('/jsons_plotly/sum_99/Oceania2.json',this)" type="button" class="btn btn-outline-primary" id="btnOc2">Oceania 2</button>
+                        <button onclick="myFunction_reset_view('/jsons_plotly/sum_99/scatter.json',this)" type="button" class="btn btn-outline-primary" id="btnRset">Reset View</button>
                     </div>
                     <div class="row hold-btn p-4">
                         <div class="col-2 button-wrapper">
