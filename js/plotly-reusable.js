@@ -74,7 +74,7 @@ function myFunction(jsonFilePath, buttonElement) {
 
     const switchCheckbox = document.getElementById('holdSwitch');
     if (!switchCheckbox.checked) { // Use ! to check if it's not checked
-        loadJSONAndStore('./jsons_plotly/sum_99/scatter.json');
+        loadJSONAndStore('/jsons_plotly/sum_99/scatter.json');
     }
     let dataj;
     loadJSONFile(jsonFilePath)
