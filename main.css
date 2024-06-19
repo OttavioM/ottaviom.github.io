@@ -1158,3 +1158,19 @@ SWs WSYs and WSYs buttons style
   margin-bottom: 1rem;
 }
 
+.btn-active_sys {
+  background-color: green;
+  color: white;
+  border-color: lightgreen;
+}
+
+.btn-wsys-style{
+  border-color: lightgreen;
+}
+
+.btn-wsys-style:hover{
+  background-color: lightgreen;
+  color: white;
+}
+
+
