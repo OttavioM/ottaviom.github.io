@@ -49,9 +49,18 @@
     </div> -->
     <!-- END DAY NIGHT BUTTON -->
     <div class="row p-4">
+        
+        <div class="h2" style = "text-align: center;">
+            WAVE CLIMATE SWELL SYSTEMS
+        </div>
+        <div class="container ws-sw-button">
+            <button onclick="myFunction('./jsons_plotly/sum_99/Africa.json',this)" type="button" class="btn btn-outline-primary css-right-space" id="btnAfr">Africa</button>
+            <button onclick="myFunction('./jsons_plotly/sum_99/Europe.json',this)" type="button" class="btn btn-outline-primary" id="btnEUr">Europe</button>
+        </div>
         <div class="card m-auto day-night">
             <div class="card-body day-night">
                 <div id="chart1"></div>
+                    
                     <!---------------- LOADING THE SCRIPTS ----------------------->
                     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
                     <!-- --------------SWITCH BUTTON------------------ -->
