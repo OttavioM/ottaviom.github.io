@@ -49,10 +49,30 @@
     </div> -->
     <!-- END DAY NIGHT BUTTON -->
     <div class="row p-4">
-        
         <div class="h2" id="waveClimateText" style="text-align: center;">
             WAVE CLIMATE SWELL SYSTEMS
         </div>
+
+        <div class="container p m-auto day-night">
+            <p><b>A wave system</b> is considered as the long-term climate conditions prevailing over a frequency-direction wave energy area collecting similar environmental and physical characteristics. The method is applied for the hourly time series of the directional wave spectra. First, the watershed clustering algorithm is used and the partitions found are classified as wind sea or swells based on a wave age criterion. The information obtained from the swell spectral partitions is then used to estimate the probability of their occurrence within specific frequency-direction bins and the clustering algorithm is applied anew to this population in order to identify the number of significant long-term climate wave systems locally and their characteristics. </p>
+            <p>This viewer is part of the article <a href="https://doi.org/10.3389/fmars.2024.1385285" target="_blank">Mazzaretto, O. M., & Menendez, M. (2024). A worldwide coastal analysis of the climate wave systems. Frontiers in Marine Science, 11, 1385285.</a></p>
+            <p>A more extensive <b>guide</b> is available in the <a href="https://www.frontiersin.org/articles/10.3389/fmars.2024.1385285/full#supplementary-material" target="_blank">Supplementary Material.</a></p>
+            <p>To see the <b>quiver plot</b> information of each wave system <b>scroll down</b> and select one of the world region first.
+                Once the arrows (quiver plot) appear, a colorbar is loaded on the left and a zoom over the interested region is applied.
+                The meaning of the arrows are:
+                <ul style="margin-left: 3rem">
+                    <li><b>Color</b>: identifies the relative energy (%) of each swell wave system, the colorbar show the intensity;</li>
+                    <li><b>Size</b>: represents the mean Tp;</li>
+                    <li><b>Direction</b>: represents the mean MWD.</li>
+                </ul>
+            <!-- 
+                When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+            \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\] -->
+            To switch in the visor, between only swell wave systems and the total wind systems (triangle head-shape arrow is the wind sea), please select one of the below buttons. The green light
+            means that the vison is highlighted to the Swell WSYs (onyl swells) or WSYs (Swells and wind sea).
+            </p>
+        </div>
+        
         <div class="container ws-sw-button">
             <button onclick="handleButtonClick('SWWSYs')" type="button" class="btn btn-wsys-style css-right-space" id="SWWSYs">Swell WSYs</button>
             <button onclick="handleButtonClick('WSYs')" type="button" class="btn btn-wsys-style" id="WSYs">WSYs</button>
@@ -98,21 +118,26 @@
                             </label>
                         </div>
                 </div>
-                <div class="row p-4">
-                    <p class="card-text day-night" style="padding-top: 3rem;">
-                        The color identifies the relative energy of each family, it is expressed in percentage, 
+                <!-- <div class="row p-4"> -->
+                    <!-- <p class="card-text day-night" style="padding-top: 3rem;"> -->
+                        <!-- The color identifies the relative energy of each family, it is expressed in percentage, 
                         \(m_{0_{WSys_i}} \over m_{0_{WSys_{tot}}}\). The size of the arrow represents the time averaged \(T_p\), 
                         whereas the number of the arrow are the number of wave systems that exist in that location, 
-                        the direction of the arrow represent the time averaged \(MWD\) where the wave systems come from.
+                        the direction of the arrow represent the time averaged \(MWD\) where the wave systems come from. -->
                     <!-- 
                         When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
                     \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\] -->
-                    </p>
-                </div>
+                    <!-- </p> -->
+                <!-- </div> -->
             </div>
             </div>
         </div>
     </div>
+    
+    <!-- <div id="sfc52kupykwax1j8cfnyetgejk4aae2123s"></div>
+    <script type="text/javascript" src="https://counter4.optistats.ovh/private/counter.js?c=52kupykwax1j8cfnyetgejk4aae2123s&down=async" async></script>
+    <br><noscript><a href="https://www.contadorvisitasgratis.com" title="contador de visitas para web"><img src="https://counter4.optistats.ovh/private/contadorvisitasgratis.php?c=52kupykwax1j8cfnyetgejk4aae2123s" border="0" title="contador de visitas para web" alt="contador de visitas para web"></a></noscript> -->
+
 
     <!-- plotly CDN -->
 
