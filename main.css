@@ -1131,5 +1131,15 @@ ul{
 }
 }
 
-
+/*===========================================
+SWs WSYs and WSYs buttons style
+=============================================*/
+.css-right-space{
+  margin-right: 1rem;
+}
+.container.ws-sw-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
