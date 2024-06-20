@@ -50,15 +50,15 @@
 
 #chart1{
   height: 45rem;
-  max-width: 95rem;
+  /* max-width: 90%; */
 }
 
 .card{
-  max-width: 95rem;
+  max-width: 90%;
 }
 
 .container.p {
-  max-width: 95rem;
+  max-width: 90%;
 }
 
 /* Define a style for the active button */
@@ -1071,11 +1071,13 @@ Mobile style's
 /* ==========================================
               FOOTER BAR
 ============================================= */
+#colophon {
+  background-color: #5391fd;
+}
 
 .footer-container{
 	max-width: 150rem;
 	margin:auto;
-  background-color: #5391fd;
 }
 .footer-row{
 	display: flex;

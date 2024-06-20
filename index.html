@@ -59,23 +59,24 @@
             <p>A more extensive <b>guide</b> is available in the <a href="https://www.frontiersin.org/articles/10.3389/fmars.2024.1385285/full#supplementary-material" target="_blank">Supplementary Material.</a></p>
             <p>To see the <b>quiver plot</b> information of each wave system <b>scroll down</b> and select one of the world region first.
                 Once the arrows (quiver plot) appear, a colorbar is loaded on the left and a zoom over the interested region is applied.
-                The meaning of the arrows are:
+                The meaning of the arrows is:
                 <ul style="margin-left: 3rem">
-                    <li><b>Color</b>: identifies the relative energy (%) of each swell wave system, the colorbar show the intensity;</li>
+                    <li><b>Color</b>: identifies the relative energy (%) of each wave system, the colorbar show the intensity;</li>
                     <li><b>Size</b>: represents the mean Tp;</li>
                     <li><b>Direction</b>: represents the mean MWD.</li>
                 </ul>
             <!-- 
                 When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
             \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\] -->
-            To switch in the visor, between only swell wave systems and the total wind systems (triangle head-shape arrow is the wind sea), please select one of the below buttons. The green light
-            means that the vison is highlighted to the Swell WSYs (onyl swells) or WSYs (Swells and wind sea).
+            
+            To toggle between viewing only swell wave systems (Swell WSYs) and the total wave systems (WSYs) (triangle head-shape arrow indicating wind sea), 
+            please select one of the buttons below. The green light indicates that the view is focused on either Swell WSYs (only swells) or WSYs (swells and wind sea).
             </p>
         </div>
         
         <div class="container ws-sw-button">
-            <button onclick="handleButtonClick('SWWSYs')" type="button" class="btn btn-wsys-style css-right-space" id="SWWSYs">Swell WSYs</button>
-            <button onclick="handleButtonClick('WSYs')" type="button" class="btn btn-wsys-style" id="WSYs">WSYs</button>
+            <button onclick="handleButtonClick('SWWSYs')" type="button" class="btn btn-wsys-style css-right-space" id="SWWSYs" title = "Click to view: Swell Wave Systems">Swell WSYs</button>
+            <button onclick="handleButtonClick('WSYs')" type="button" class="btn btn-wsys-style" id="WSYs" title = "Click to view: Wave Systems (Swells and Wind Sea)">WSYs</button>
         </div>
     
         <script src="/js/swwsys-wsys-btn.js"></script>
@@ -157,6 +158,7 @@
       });
      
     </script>
+
     <div id="footer"></div>
 </body>
 
