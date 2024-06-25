@@ -54,24 +54,27 @@
         </div>
 
         <div class="container p m-auto day-night">
-            <p><b>A wave system</b> is considered as the long-term climate conditions prevailing over a frequency-direction wave energy area collecting similar environmental and physical characteristics. The method is applied for the hourly time series of the directional wave spectra. First, the watershed clustering algorithm is used and the partitions found are classified as wind sea or swells based on a wave age criterion. The information obtained from the swell spectral partitions is then used to estimate the probability of their occurrence within specific frequency-direction bins and the clustering algorithm is applied anew to this population in order to identify the number of significant long-term climate wave systems locally and their characteristics. </p>
-            <p>This viewer is part of the article <a href="https://doi.org/10.3389/fmars.2024.1385285" target="_blank">Mazzaretto, O. M., & Menendez, M. (2024). A worldwide coastal analysis of the climate wave systems. Frontiers in Marine Science, 11, 1385285.</a></p>
-            <p>A more extensive <b>guide</b> is available in the <a href="https://www.frontiersin.org/articles/10.3389/fmars.2024.1385285/full#supplementary-material" target="_blank">Supplementary Material.</a></p>
-            <p>To see the <b>quiver plot</b> information of each wave system <b>scroll down</b> and select one of the world region first.
-                Once the arrows (quiver plot) appear, a colorbar is loaded on the left and a zoom over the interested region is applied.
-                The meaning of the arrows is:
-                <ul style="margin-left: 3rem">
-                    <li><b>Color</b>: identifies the relative energy (%) of each wave system, the colorbar show the intensity;</li>
-                    <li><b>Size</b>: represents the mean Tp;</li>
-                    <li><b>Direction</b>: represents the mean MWD.</li>
-                </ul>
-            <!-- 
-                When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-            \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\] -->
-            
-            To toggle between viewing only swell wave systems (Swell WSYs) and the total wave systems (WSYs) (triangle head-shape arrow indicating wind sea), 
-            please select one of the buttons below. The green light indicates that the view is focused on either Swell WSYs (only swells) or WSYs (swells and wind sea).
+            <p><b>A wave system is considered as the long-term climate conditions prevailing over a frequency-direction wave energy area collecting similar environmental and physical characteristics.</b><br></p>
+
+            <p>This viewer shows the resulting wave systems from the scientific publication:
+                 <a href="https://doi.org/10.3389/fmars.2024.1385285" target="_blank">Mazzaretto, O. M., & Menendez, M. (2024). A worldwide coastal analysis of the climate wave systems. Frontiers in Marine Science, 11, 1385285.</a></p>
+                 
+            <p>The wave data analyzed to get the wave systems is the 
+                    <a href="https://doi.org/10.1016/j.coastaleng.2017.03.005" target="_blank">GOW</a>
+                    (Global wave hindcast) directional wave spectra, from 1989 to 2020 each 3-hourly.
             </p>
+                
+            <p>A more extensive <b>guide</b> is available in the <a href="https://www.frontiersin.org/articles/10.3389/fmars.2024.1385285/full#supplementary-material" target="_blank">Supplementary Material.</a></p>
+
+            <p>The interactive map below indicates the identified swell wave systems <b>(Swell WSYs)</b> along the coast worldwide.
+                 You can zoom in/out and hover a target coastal point to obtain more detailed information in a pop-up.
+            </p>
+
+            <p>
+                You can view the swell wave systems <b>(Swell WSYs)</b> but also toggle to the total wave systems, 
+                including the wind sea wave system information, by clicking on <b>WSYs</b> button (swells and wind sea) below.
+            </p>
+            
         </div>
         
         <div class="container ws-sw-button">
@@ -111,7 +114,7 @@
                     </div>
                     <div class="row hold-btn p-4">
                         <div class="col-2 button-wrapper">
-                            <p> HOLD THE PLOTS</p>
+                            <p> Hold the regions</p>
                             <!-- Rounded switch -->
                             <label class="switch3" >
                                 <input type="checkbox" id="holdSwitch"/>
@@ -130,6 +133,22 @@
                     \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\] -->
                     <!-- </p> -->
                 <!-- </div> -->
+                <div class="container p m-auto day-night">
+                    <p>To see the information of each wave system (magnitude, direction, etc.) in detail through quivers you have to select a world 
+                        region first (e.g., Europe). The arrows meaning is:
+                        <ul style="margin-left: 3rem">
+                            <li id = "wsysEnergyExplain"><b>Color</b>: identifies the relative energy (%) of each swell wave system related to the total energy of the swells, the colorbar show the intensity;</li>
+                            <li><b>Size</b>: represents the mean Tp;</li>
+                            <li><b>Direction</b>: represents the mean MWD.</li>
+                        </ul>
+                    <!-- 
+                        When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
+                    \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\] -->
+                    
+                        In case you are interested in more than one world region, you can choose the option (Hold the regions).
+                    </p>
+
+                </div>
             </div>
             </div>
         </div>
@@ -159,7 +178,19 @@
      
     </script>
 
-    <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://ihcantabria.github.io/WaveSystemsViewer/">WaveSystemViewer</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/OttavioM">IH-Cantabria (Ottavio Mattia Mazzaretto)</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+    <p style="transform: scale(0.7); transform-origin: top left;" xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
+        <a property="dct:title" rel="cc:attributionURL" href="https://ihcantabria.github.io/WaveSystemsViewer/">WaveSystemViewer</a> 
+        by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/OttavioM">IH-Cantabria (Ottavio Mattia Mazzaretto)</a> 
+        is licensed under 
+        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+            CC BY-NC-SA 4.0
+            <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="">
+            <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="">
+            <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="">
+            <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt="">
+        </a>
+    </p>
+
     <div id="footer"></div>
 
 </body>

@@ -10,6 +10,7 @@ function handleButtonClick(buttonId) {
     var waveClimateText = document.getElementById('waveClimateText');
     var swwsysButton = document.getElementById('SWWSYs');
     var wsysButton = document.getElementById('WSYs');
+    var wsysEnergyExplain = document.getElementById('wsysEnergyExplain');
 
     if (buttonId === 'SWWSYs') {
         // Update state
@@ -28,6 +29,7 @@ function handleButtonClick(buttonId) {
         isSwellActive = false;
         // Change the text content to the new text
         waveClimateText.textContent = 'WAVE CLIMATE SYSTEMS';
+        wsysEnergyExplain.innerHTML = '<b>Color</b>: identifies the relative energy (%) of each wave system related to the total energy, the colorbar show the intensity;';
         // Update button styles
         swwsysButton.classList.remove('btn-active_sys');
         wsysButton.classList.add('btn-active_sys');
