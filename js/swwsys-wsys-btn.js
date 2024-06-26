@@ -17,6 +17,7 @@ function handleButtonClick(buttonId) {
         isSwellActive = true;
         // Change the text content to the original
         waveClimateText.textContent = 'WAVE CLIMATE SWELL SYSTEMS';
+        wsysEnergyExplain.innerHTML = '<b>Color</b>: identifies the relative energy (%) of each swell wave system related to the total energy of the swells, the colorbar show the intensity;';
         // Update button styles
         swwsysButton.classList.add('btn-active_sys');
         wsysButton.classList.remove('btn-active_sys');
